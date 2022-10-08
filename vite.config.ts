@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsx({
-      // options are passed on to @vue/babel-plugin-jsx
+      transformOn:true, //on{click:xx} or onClick:xxx  两种写法都可以
+      mergeProps:true //自动把class style onClick 绑定到子组件的根元素
     })
   ]
 })

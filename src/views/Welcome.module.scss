@@ -1,0 +1,31 @@
+.welcome{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    //渐变色
+    background-image: linear-gradient(to bottom,rgb(64,133,98)0%,rgb(248,197,119)100%);
+    > header{
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 66px;
+        color: rgb(252,148,19);
+    }
+    img{
+         height: 10vh;
+    }
+    >main{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        
+
+    }
+    >footer{
+        flex-shrink: 0;
+       
+    }
+   
+}

@@ -1,0 +1,39 @@
+.wrapper{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    > .card{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border-radius: 8px;
+        padding: 16px;
+        margin:16px 16px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        > h2{
+            margin-top: 40px;
+        }
+    }
+    > .actions{
+        //做一个假的元素总共三个这样下一页和跳过都能分别在中间和右侧
+        //然后把假元素隐藏。用margin把跳过往左靠
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin:20px 16px;
+        font-size: 32px;
+        color: white;
+        > .fake{
+            visibility: hidden;
+        }
+    }
+}
+
+
+.logo{
+    
+}

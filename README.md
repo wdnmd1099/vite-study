@@ -35,3 +35,11 @@ tsx可定义模板代码 ts就不含模板代码
 
 
 
+
+
+
+```
+#app
+    .page
+        .welcome_wrapper
+```

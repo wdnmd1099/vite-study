@@ -1,9 +1,11 @@
 .welcome{
-    height: 100vh;
+    height: calc(100vh - var(--welcome-nav-height));
     display: flex;
     flex-direction: column;
     //渐变色
-    background-image: linear-gradient(to bottom,rgb(64,133,98)0%,rgb(248,197,119)100%);
+    background-image: linear-gradient(to bottom, var(--welcome-bg-jianBian-from)0%,var(--welcome-bg-jianBian-to)100%);
+     margin-bottom:var(--welcome-nav-height);
+    
     > header{
         flex-shrink: 0;
         display: flex;
@@ -11,7 +13,7 @@
         justify-content: center;
         align-items: center;
         padding-top: 66px;
-        color: rgb(252,148,19);
+        color: var(--welcome-header-color);
     }
     img{
          height: 10vh;

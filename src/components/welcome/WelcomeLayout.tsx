@@ -1,5 +1,5 @@
 import { defineComponent, ref } from "vue";
-import style1 from './First.module.scss'
+import style1 from './WelcomeLayout.module.scss'
 export const WelcomeLayout = defineComponent({
     setup(props, context) {
         const slots =context.slots

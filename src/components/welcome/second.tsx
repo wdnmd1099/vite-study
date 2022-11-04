@@ -1,31 +1,22 @@
 import { defineComponent, ref } from "vue";
-import style1 from './First.module.scss'
-import clock from '../../assets/icons/clock.svg'
+import style1 from './First.module.scss';
 import { RouterLink } from "vue-router";
+import {WelcomeLayout} from './WelcomeLayout';
+import clock from '../../assets/icons/clock.svg'
 export const Second = defineComponent({
     setup(props, context) {
-        return () => (
-            <>
-        <div class={style1.wrapper}>
-            <div class={style1.card}>
-            <img src={clock} class={style1.clock}/>
-            <h2>每日提醒<br/>不遗失每一笔账单</h2>
-            </div>
-            <div class={style1.actions}>
+        const slots = {
+            icon:()=><img src={clock}/>,
+            title:()=><h2>每日提醒<br/>不遗失每一笔账单</h2>,
+            buttons:()=> <>
                 <RouterLink class={style1.fake} to="/welcome/start">跳过</RouterLink>
                 <RouterLink to="/welcome/3">下一页</RouterLink>
                 <RouterLink to="/welcome/start">跳过</RouterLink>
-            </div>
-        </div>
-        </>
+              </>
+        }
+        return () => (
+           <WelcomeLayout v-slots={slots}></WelcomeLayout>
+           
         )
     }
 })
-
-
-// import { defineComponent, ref } from "vue";
-// export const Second = defineComponent({
-//     setup(props, context) {
-//         return () => (<div>4</div>)
-//     }
-// })

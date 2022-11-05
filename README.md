@@ -19,7 +19,7 @@ yarn add vue-router@4.0.14
  yarn add sass@1.49.11
 ```
 
-## 搭建完成运行 npx pnpm run dev
+## 搭建完成运行 npx pnpm run dev  或着  yarn run dev
 
 
 

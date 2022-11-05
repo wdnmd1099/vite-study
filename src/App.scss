@@ -13,7 +13,7 @@ body{
      transition: all 1s ease-out;
 }
 .slide-fade-leave-active{
-    transition: all 0.99s ease-out;
+    transition: all 0.99s ease-out; //动画离开比进动画慢一点点，不然会抢画面屏幕闪烁
     position: absolute;
     top: 0;
     left: 0;
@@ -33,7 +33,7 @@ body{
     transition: all 1s ease-out;
 }
 .slide-fade2-leave-active{
-    transition: all 0.99s ease-out;
+    transition: all 0.99s ease-out;  //动画离开比进动画慢一点点，不然会抢画面屏幕闪烁
     position: absolute;
     top: 0;
     left: 0;

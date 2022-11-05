@@ -1,5 +1,6 @@
-import { defineComponent, h, Transition } from "vue";
-import { RouterLink, RouterView } from "vue-router";
+import { defineComponent, h, Transition, VNode } from "vue";
+import { RouteLocationNormalizedLoaded, RouterLink, RouterView } from "vue-router";
+import dongHua from './views/Welcome.module.scss'
 import "./App.scss"
 
 export const App = defineComponent({
@@ -7,17 +8,26 @@ export const App = defineComponent({
         return () => (
             <div class="page">
                 <RouterView>
-                
-                    {(options:any) => {
-                         if(options.route.href==="#/welcome"){
-                            console.log(options.route.href)
-                            return<Transition name="slide-fade2"><options.Component /></Transition>
-                         }else if(options.route.href==="#/page2"){
-                            console.log(options.route.href)
-                            return<Transition name="slide-fade"><options.Component /></Transition>
+                    {({Component:C,route:R}:{Component:VNode,route:RouteLocationNormalizedLoaded}) => {
+                         if(R.fullPath==="/welcome"){
+                            console.log(R.fullPath)
+                            return <Transition enterActiveClass={dongHua.slide_fade2_enter_active}
+                                    leaveActiveClass={dongHua.slide_fade2_leave_active}
+                                    enterFromClass={dongHua.slide_fade2_enter_from}
+                                    enterToClass={dongHua.slide_fade2_enter_to}
+                            >
+                                  {C}
+                                </Transition>
+                         }else if(R.fullPath==="/page2"){
+                            console.log(R.fullPath)
+                            return <Transition enterActiveClass={dongHua.slide_fade_enter_active}
+                                     leaveActiveClass={dongHua.slide_fade_leave_active}
+                                     enterFromClass={dongHua.slide_fade_enter_from}
+                                     enterToClass={dongHua.slide_fade_enter_to}
+                            >
+                                {C}
+                                </Transition>
                          }
-                        
-                         
                       }
                     }
 
@@ -26,3 +36,4 @@ export const App = defineComponent({
         )
     },
 })
+

@@ -1,33 +1,21 @@
 .welcome{
-    height: calc(100vh - var(--welcome-nav-height));
+    height:100vh;
     display: flex;
     flex-direction: column;
     //渐变色
     background-image: linear-gradient(to bottom, var(--welcome-bg-jianBian-from)0%,var(--welcome-bg-jianBian-to)100%);
-     margin-bottom:var(--welcome-nav-height);
+   
     
     > header{
+        height:100vh;
+        width: 100vw;
         flex-shrink: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 66px;
+        // padding-top: 66px;
         color: var(--welcome-header-color);
-    }
-    img{
-         height: 10vh;
-    }
-    >main{
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        
-
-    }
-    >footer{
-        flex-shrink: 0;
-       
     }
    
 }

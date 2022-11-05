@@ -1,14 +1,14 @@
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref ,Transition} from "vue";
 import { RouterLink, RouterView } from "vue-router";
 import style from './Welcome.module.scss'
 
-export const Welcome = defineComponent({
+export const page2 = defineComponent({
     setup(props, context) {
         return () => 
         <div class={style.welcome}>
            <header>
-             <h1>这是第一页哦</h1>
-             <RouterLink to="/page2">下一页</RouterLink>
+             <h1>第二页</h1>
+             <router-link to="/welcome">上一页</router-link>
            </header>
         </div>
     }
